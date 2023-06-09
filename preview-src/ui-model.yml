@@ -124,3 +124,9 @@ page:
       - content: Some Code
         url: '/xyz/5.2/index.html#some-code'
         urlType: internal
+  attributes:
+    quarkiverse_root_url: https://github.com/quarkiverse
+asciidoc:
+  attributes:
+    page-quarkiverse_root_url: https://github.com/quarkiverse
+
