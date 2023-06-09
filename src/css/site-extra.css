@@ -1,19 +1,19 @@
 .doc {
-    max-width: 75rem;
+  max-width: 75rem;
 }
 
 i.fa {
-    hyphens: none;
-    font-style: normal;
+  hyphens: none;
+  font-style: normal;
 }
 
 .github-project {
-    display: none;
-    padding-right: 0.5rem;
+  display: none;
+  padding-right: 0.5rem;
 }
 
 @media screen and (min-width: 1024px) {
-    .github-project {
-      display: block;
-    }
+  .github-project {
+    display: block;
+  }
 }
