@@ -1,0 +1,31 @@
+---
+# GitHub Actions workflow for commits pushed to the antora theme repo
+
+name: CI at GitHub
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: [18.16.0]
+    steps:
+      - name: Clone the repo
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Run with CI
+        run: npm ci
+
+      # Build the Antora UI bundle for release.
+      - name: Build bundle
+        id: build_bundle
+        run: gulp bundle
