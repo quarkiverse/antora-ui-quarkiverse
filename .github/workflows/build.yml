@@ -29,3 +29,17 @@ jobs:
       - name: Build bundle
         id: build_bundle
         run: gulp bundle
+
+      - name: Publish bundle
+        uses: ncipollo/release-action@v1
+        # Only try and deploy on merged code
+        if: "github.repository == 'quarkiverse/antora-ui-quarkiverse' && github.ref_name == 'main' && (github.event_name == 'push' || github.event_name == 'schedule')"
+        with:
+          artifacts: "./build/ui-bundle.zip"
+          omitBody: true
+          allowUpdates: true
+          generateReleaseNotes: true
+          makeLatest: true
+          tag: "latest"
+          name: "HEAD"
+          replacesArtifacts: true
