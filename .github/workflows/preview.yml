@@ -2,33 +2,45 @@ name: Surge PR Preview
 
 on:
   workflow_run:
-    workflows: [ "CI" ]
+    workflows: [ "Gatsby Publish" ]
     types:
       - completed
-  pull_request_target:
-    types: [ closed ]
 
 jobs:
   preview:
     runs-on: ubuntu-20.04
-    if: github.event.pull_request_target || (github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success')
+    if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Download PR Artifact
         uses: dawidd6/action-download-artifact@v2
-        if: github.event.workflow_run && github.event.workflow_run.type == 'completed'
         with:
           workflow: ${{ github.event.workflow_run.workflow_id }}
           workflow_conclusion: success
           name: site
-      - uses: afc163/surge-preview@v1
-        id: preview_step
+      - name: Store PR id as variable
+        id: pr
+        run: |
+          echo "id=$(<pr-id.txt)" >> $GITHUB_OUTPUT
+          rm -f pr-id.txt
+      - name: Publishing to surge for preview
+        id: deploy
+        run: npx surge ./ --domain https://quarkiverse-antora-ui-quarkus-pr-${{ steps.pr.outputs.id }}-preview.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      - name: Update PR status comment on success
+        uses: actions-cool/maintain-one-comment@v3.0.0
         with:
-          surge_token: ${{ secrets.SURGE_TOKEN }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          dist: site
-          failOnError: 'true'
-          teardown: 'true'
-          build: |
-            echo Deploying to surge.sh
-      - name: Get the preview_url
-        run: echo "url => ${{ steps.preview_step.outputs.preview_url }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            🚀 PR Preview ${{ github.sha }} has been successfully built and deployed to https://quarkiverse-antora-ui-quarkus-pr-${{ steps.pr.outputs.id }}-preview.surge.sh
+            <!-- Sticky Pull Request Comment -->
+          body-include: '<!-- Sticky Pull Request Comment -->'
+          number: ${{ steps.pr.outputs.id }}
+      - name: Update PR status comment on failure
+        if: ${{ failure() }}
+        uses: actions-cool/maintain-one-comment@v3.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            😭 Deploy PR Preview failed.
+            <!-- Sticky Pull Request Comment -->
+          body-include: '<!-- Sticky Pull Request Comment -->'
+          number: ${{ steps.pr.outputs.id }}
