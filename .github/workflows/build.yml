@@ -1,7 +1,7 @@
 ---
 # GitHub Actions workflow for commits pushed to the antora theme repo
 
-name: CI at GitHub
+name: CI
 on:
   push:
     branches: [main]

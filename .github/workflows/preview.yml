@@ -2,19 +2,20 @@ name: Surge PR Preview
 
 on:
   workflow_run:
-    workflows: [ "Gatsby Publish" ]
+    workflows: [ "CI" ]
     types:
       - completed
-      - closed
+  pull_request_target:
+    types: [ closed ]
 
 jobs:
   preview:
     runs-on: ubuntu-20.04
-    if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success'
+    if: github.event.pull_request_target || (github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success')
     steps:
       - name: Download PR Artifact
         uses: dawidd6/action-download-artifact@v2
-        if: github.event.workflow_run.type == 'completed'
+        if: github.event.workflow_run && github.event.workflow_run.type == 'completed'
         with:
           workflow: ${{ github.event.workflow_run.workflow_id }}
           workflow_conclusion: success
