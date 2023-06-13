@@ -50,22 +50,25 @@ jobs:
           retention-days: 3
 
       - name: Bump version and push tag
-        uses: anothrNick/github-tag-action@1.64.0 # Don't use @master or @v1 unless you're happy to test the latest version
+        id: tag
+        uses: anothrNick/github-tag-action@1.64.0
         # Only try and deploy on merged code
         if: "github.repository == 'quarkiverse/antora-ui-quarkiverse' && github.ref_name == 'main' && (github.event_name == 'push' || github.event_name == 'schedule')"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # if you don't want to set write permissions use a PAT token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
 
       - name: Publish bundle
         uses: ncipollo/release-action@v1
-        # Only try and deploy on merged code
-        if: "github.repository == 'quarkiverse/antora-ui-quarkiverse' && github.ref_name == 'main' && (github.event_name == 'push' || github.event_name == 'schedule')"
+        # Only try and deploy on merged code, ie if we just made a tag
+        if: "steps.tag.outputs.new_tag"
         with:
           artifacts: "./build/ui-bundle.zip"
           omitBody: true
           allowUpdates: true
           generateReleaseNotes: false
           makeLatest: true
+          tag: "${{ steps.tag.outputs.new_tag }}"
           name: "HEAD"
           replacesArtifacts: true
+
