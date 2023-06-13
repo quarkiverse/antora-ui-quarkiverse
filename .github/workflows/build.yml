@@ -30,6 +30,25 @@ jobs:
         id: build_bundle
         run: gulp bundle
 
+      # Build the Antora preview (ends up in ./public)
+      - name: Build preview
+        # Only support previews on PRs
+        if: "github.event_name == 'pull_request'"
+        id: build_preview
+        run: gulp preview:build
+
+      - name: Store PR id
+        if: "github.event_name == 'pull_request'"
+        run: echo ${{ github.event.number }} > ./public/pr-id.txt
+
+      - name: Publishing directory for PR preview
+        if: "github.event_name == 'pull_request'"
+        uses: actions/upload-artifact@v2
+        with:
+          name: site
+          path: ./public
+          retention-days: 3
+
       - name: Publish bundle
         uses: ncipollo/release-action@v1
         # Only try and deploy on merged code
