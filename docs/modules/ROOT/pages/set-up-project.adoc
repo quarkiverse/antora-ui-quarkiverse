@@ -1,5 +1,5 @@
 = Set up a UI Project
-:url-project: https://gitlab.com/antora/antora-ui-default.git
+:url-project: https://github.com/quarkiverse/antora-ui-quarkiverse.git
 
 Before you can start working on the UI, you need to grab the sources and initialize the project.
 The sources can be {url-project}[Antora's default UI] or an existing UI project structured to work with Antora.

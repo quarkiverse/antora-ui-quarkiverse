@@ -3,8 +3,8 @@
 :hide-uri-scheme:
 // URLs:
 :url-antora: https://antora.org
-:url-repo: https://gitlab.com/antora/antora-ui-default
-:url-preview: https://antora.gitlab.io/antora-ui-default
+:url-repo: https://github.com/quarkiverse/antora-ui-quarkiverse
+:url-preview: https://quarkiverse.github.io/quarkiverse-docs/
 :url-hbs: https://handlebarsjs.com
 :url-gulp: https://gulpjs.com
 :url-npm: https://npmjs.com
