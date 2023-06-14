@@ -22,7 +22,7 @@ A bold <strong>word</strong>, or a bold <strong>phrase of text</strong>.
 Since `<strong>` is a semantic HTML element, it automatically inherits default styling (`font-weight: bold`) from the browser.
 If you want to override the browser styles, you'll need to define properties on the `strong` selector in the stylesheet for your UI.
 
-In the default UI, the `<strong>` element is styled in the 500 font weight of the current typeface (Roboto).
+In the default UI, the `<strong>` element is styled in the 500 font weight of the current typeface (Open Sans).
 For example:
 
 [example]
@@ -41,7 +41,7 @@ An italic <em>word</em>, or an italic <em>phrase of text</em>.
 Since `<em>` is a semantic HTML element, it automatically inherits default styling (`font-style: italic`) from the browser.
 If you want to override the browser styles, you'll need to define properties on the `em` selector in the stylesheet for your UI.
 
-In the default UI, the `em` element is styled in the italic font variant of the current typeface (Roboto).
+In the default UI, the `em` element is styled in the italic font variant of the current typeface (Open Sans).
 For example:
 
 [example]
