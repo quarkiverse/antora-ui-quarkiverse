@@ -18,7 +18,7 @@ site:
     latestVersion: *latest_version_abc
   - &component
     name: xyz
-    title: &component_title Project XYZ
+    title: &component_title Project NotReally
     url: /xyz/6.0/index.html
     versions:
     - &latest_version_xyz
@@ -55,7 +55,7 @@ site:
 page:
   url: *home_url
   home: true
-  title: Brand&#8217;s Hardware &amp; Software Requirements
+  title: Minecraft Observability
   component: *component
   componentVersion: *component_version
   version: '5.2'
@@ -77,7 +77,7 @@ page:
   - content: Quickstart
     url: '#'
     urlType: fragment
-  - content: Brand&#8217;s Hardware &amp; Software Requirements
+  - content: Minecraft Observability
     url: /xyz/5.2/index.html
     urlType: internal
   versions:
@@ -101,7 +101,7 @@ page:
       url: '#'
       urlType: fragment
       items:
-      - content: Brand&#8217;s Hardware &amp; Software Requirements
+      - content: Minecraft extension
         url: /xyz/5.2/index.html
         urlType: internal
       - content: Cu Solet

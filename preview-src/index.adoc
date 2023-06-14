@@ -1,4 +1,4 @@
-= Hardware and Software Requirements
+= Quarkus Minecraft Observability
 Author Name
 :idprefix:
 :idseparator: -
@@ -8,7 +8,7 @@ Author Name
 
 [.float-group]
 --
-image:multirepo-ssg.svg[Multirepo SSG,180,135,float=right,role=float-gap]
+image:icon-standards.svg[Community love,180,135,float=right,role=float-gap]
 Platonem complectitur mediocritatem ea eos.
 Ei nonumy deseruisse ius.
 Mel id omnes verear.
@@ -286,12 +286,12 @@ Est in reque homero principes, meis deleniti mediocrem ad has.
 Ex nam suas nemore dignissim, vel apeirian democritum et.
 
 .Antora is a multi-repo documentation site generator
-image::multirepo-ssg.svg[Multirepo SSG,3000,opts=interactive]
+image::icon-standards.svg[Lovely people,3000,opts=interactive]
 
 Make the switch today!
 
-.Full Circle with Jake Blauvelt
-video::300817511[vimeo,640,360,align=left]
+.The extension in action
+video::w5SBQpAQ8m8[youtube,640,360,align=left]
 
 [#english+中文]
 == English + 中文
