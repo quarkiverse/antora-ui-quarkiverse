@@ -23,7 +23,7 @@ nav.pagination .next {
 }
 
 nav.pagination span::before {
-  color: var(--toolbar-muted-color);
+  color: var(--color-grey-3);
   font-size: 0.75em;
   padding-bottom: 0.1em;
 }
@@ -44,7 +44,7 @@ nav.pagination a {
 
 nav.pagination a::before,
 nav.pagination a::after {
-  color: var(--toolbar-muted-color);
+  color: var(--color-grey-3);
   font-weight: normal;
   font-size: 1.5em;
   line-height: 0.75;

@@ -1,115 +1,123 @@
 :root {
   /* colors */
   --color-white: #fff;
-  --color-smoke-10: #fefefe;
-  --color-smoke-30: #fafafa;
-  --color-smoke-50: #f5f5f5;
-  --color-smoke-70: #f0f0f0;
-  --color-smoke-90: #e1e1e1;
-  --color-gray-10: #c1c1c1;
-  --color-gray-30: #9c9c9c;
-  --color-gray-40: #8e8e8e;
-  --color-gray-50: #808080;
-  --color-gray-70: #5d5d5d;
-  --color-jet-20: #4a4a4a;
-  --color-jet-30: #424242;
-  --color-jet-50: #333;
-  --color-jet-70: #222;
-  --color-jet-80: #191919;
+  --color-quarkus-blue: #4695eb;
+  --color-dark-blue: #09131e;
+  --color-dark-blue-alt: #0d1c2c;
+  --color-dark-blue-1: #205894;
+  --color-soft-yellow: #fde9bf;
+  --color-orange: #e37b40;
+  --color-light-blue: #e4edf7;
+  --color-red: #ff004a;
+  --color-dark-red: #c00;
+  --color-cta-blue: #0b58ab;
+  --color-grey-0: #efefef;
+  --color-grey-1: #aaa;
+  --color-grey-2: #555;
+  --color-grey-3: #333;
+  --color-grey-4: #222;
+  --color-dark-grey: #4c4c4c;
+  --color-light-grey: #dcdcdc;
   --color-black: #000;
+
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */
   --body-font-size--desktop: 1.125em; /* 18px */
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
-  --body-font-color: var(--color-jet-70);
+  --body-font-color: var(--color-black);
   --body-font-family: "Open Sans", sans-serif;
   --body-font-weight-bold: 500;
   --monospace-font-family: "Roboto Mono", monospace;
   --monospace-font-weight-bold: 500;
   /* base */
   --body-background: var(--color-white);
-  --panel-background: var(--color-smoke-30);
-  --panel-border-color: var(--color-smoke-90);
-  --scrollbar-track-color: var(--color-smoke-30);
-  --scrollbar-thumb-color: var(--color-gray-10);
-  --scrollbar_hover-thumb-color: var(--color-gray-30);
+  --panel-background: var(--color-white);
+  --panel-border-color: var(--color-grey-3);
+  --scrollbar-track-color: var(--color-grey-2);
+  --scrollbar-thumb-color: var(--color-grey-1);
+  --scrollbar_hover-thumb-color: var(--color-grey-2);
+  --color-link-dark-bg: #9bcafa;
+  --color-link-light-bg: #1259a5;
+  --color-link-hover: --red;
+  --color-link-visited: #aa4494;
+  --color-cta-hover: var(--color-link-hover);
   /* navbar */
-  --navbar-background: var(--color-jet-80);
+  --navbar-background: var(--color-black);
   --navbar-font-color: var(--color-white);
   --navbar_hover-background: var(--color-black);
   --navbar-button-background: var(--color-white);
   --navbar-button-border-color: var(--panel-border-color);
   --navbar-button-font-color: var(--body-font-color);
   --navbar-menu-border-color: var(--panel-border-color);
-  --navbar-menu-background: var(--color-white);
-  --navbar-menu-font-color: var(--body-font-color);
-  --navbar-menu_hover-background: var(--color-smoke-50);
+  --navbar-menu-background: var(--color-grey-3);
+  --navbar-menu-font-color: var(--navbar-font-color);
+  --navbar-menu_hover-background: var(--color-quarkus-blue);
   /* nav */
   --nav-background: var(--panel-background);
-  --nav-border-color: var(--color-gray-10);
+  --nav-border-color: var(--color-grey-1);
   --nav-line-height: 1.35;
-  --nav-heading-font-color: var(--color-jet-30);
-  --nav-muted-color: var(--color-gray-70);
-  --nav-panel-divider-color: var(--color-smoke-90);
-  --nav-secondary-background: var(--color-smoke-70);
+  --nav-heading-font-color: var(--color-black);
+  --nav-muted-color: var(--color-grey-4);
+  --nav-panel-divider-color: var(--color-grey-2);
+  --nav-secondary-background: var(--color-grey-2);
   /* toolbar */
-  --toolbar-background: var(--panel-background);
-  --toolbar-border-color: var(--panel-border-color);
-  --toolbar-font-color: var(--color-gray-70);
-  --toolbar-muted-color: var(--color-gray-40);
-  --page-version-menu-background: var(--color-smoke-70);
-  --page-version-missing-font-color: var(--color-gray-40);
+  --toolbar-background: var(--color-quarkus-blue);
+  --toolbar-border-color: var(--toolbar-background);
+  --toolbar-font-color: var(--color-white);
+  --toolbar-muted-color: var(--color-grey-0);
+  --page-version-menu-background: var(--color-quarkus-blue);
+  --page-version-missing-font-color: var(--color-grey-0);
   /* admonitions */
-  --caution-color: #a0439c;
+  --caution-color: var(--color-orange);
   --caution-on-color: var(--color-white);
-  --important-color: #d32f2f;
+  --important-color: var(--color-dark-red);
   --important-on-color: var(--color-white);
-  --note-color: #217ee7;
+  --note-color: var(--color-quarkus-blue);
   --note-on-color: var(--color-white);
-  --tip-color: #41af46;
+  --tip-color: var(--color-dark-blue-1);
   --tip-on-color: var(--color-white);
-  --warning-color: #e18114;
+  --warning-color: var(--color-red);
   --warning-on-color: var(--color-white);
   /* doc */
-  --doc-font-color: var(--color-jet-50);
+  --doc-font-color: var(--color-black);
   --doc-font-size: inherit;
   --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
   --doc-line-height: 1.6;
   --doc-margin: 0 auto;
   --doc-margin--desktop: 0 2rem;
-  --heading-font-color: var(--color-jet-80);
+  --heading-font-color: var(--color-black);
   --heading-font-weight: normal;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
-  --link-font-color: #1565c0;
-  --link_hover-font-color: #104d92;
+  --link-font-color: #1259a5;
+  --link_hover-font-color: var(--color-red);
   --link_unresolved-font-color: var(--important-color);
-  --abstract-background: var(--color-smoke-70);
-  --abstract-font-color: var(--color-jet-20);
+  --abstract-background: var(--color-black);
+  --abstract-font-color: var(--color-black);
   --abstract-border-color: var(--panel-border-color);
   --admonition-background: var(--panel-background);
   --admonition-label-font-weight: var(--body-font-weight-bold);
-  --caption-font-color: var(--color-gray-70);
+  --caption-font-color: var(--color-grey-3);
   --caption-font-weight: var(--body-font-weight-bold);
-  --code-background: var(--panel-background);
-  --code-font-color: var(--body-font-color);
+  --code-background: var(--color-grey-0);
+  --code-font-color: var(--color-grey-4);
   --example-background: var(--color-white);
-  --example-border-color: var(--color-gray-70);
+  --example-border-color: var(--color-grey-4);
   --kbd-background: var(--panel-background);
-  --kbd-border-color: var(--color-gray-10);
-  --pre-background: var(--panel-background);
+  --kbd-border-color: var(--color-grey-1);
+  --pre-background: var(--code-background);
   --pre-border-color: var(--panel-border-color);
-  --pre-annotation-font-color: var(--color-gray-50);
+  --pre-annotation-font-color: var(--color-grey-3);
   --quote-background: var(--panel-background);
-  --quote-border-color: var(--color-gray-70);
-  --quote-font-color: var(--color-gray-70);
-  --quote-attribution-font-color: var(--color-gray-40);
-  --sidebar-background: var(--color-smoke-90);
+  --quote-border-color: var(--color-grey-4);
+  --quote-font-color: var(--color-grey-4);
+  --quote-attribution-font-color: var(--color-grey-3);
+  --sidebar-background: var(--color-grey-0);
   --table-border-color: var(--panel-border-color);
   --table-stripe-background: var(--panel-background);
-  --table-footer-background: linear-gradient(to bottom, var(--color-smoke-70) 0%, var(--color-white) 100%);
+  --table-footer-background: linear-gradient(to bottom, var(--color-grey-1) 0%, var(--color-white) 100%);
   /* toc */
   --toc-font-color: var(--nav-muted-color);
   --toc-heading-font-color: var(--doc-font-color);
@@ -117,9 +125,9 @@
   --toc-line-height: 1.2;
   /* footer */
   --footer-line-height: var(--doc-line-height);
-  --footer-background: var(--color-smoke-90);
-  --footer-font-color: var(--color-gray-70);
-  --footer-link-font-color: var(--color-jet-80);
+  --footer-background: var(--color-black);
+  --footer-font-color: var(--color-white);
+  --footer-link-font-color: var(--color-white);
   /* dimensions and positioning */
   --navbar-height: calc(63 / var(--rem-base) * 1rem);
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);

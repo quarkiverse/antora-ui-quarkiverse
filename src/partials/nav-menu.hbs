@@ -1,5 +1,7 @@
 {{#with page.navigation}}
 <div class="nav-panel-menu is-active" data-panel="menu">
+<!--  placeholder toolbar to align with main toolbar-->
+  <div class="toolbar" style="position: static"></div>
   <nav class="nav-menu">
     {{#with @root.page.componentVersion}}
     <h3 class="title"><a href="{{{relativize ./url}}}">{{./title}}</a></h3>

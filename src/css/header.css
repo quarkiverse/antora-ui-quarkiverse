@@ -19,12 +19,14 @@ body {
 
 .navbar a {
   text-decoration: none;
+  color: var(--navbar-font-color);
 }
 
 .navbar-brand {
   display: flex;
   flex: auto;
   padding-left: 1rem;
+  align-items: center;
 }
 
 .navbar-brand .navbar-item {
@@ -232,6 +234,9 @@ body {
     display: flex;
     position: relative;
     flex: none;
+    font-size: 1.2rem;
+    font-weight: var(--heading-font-weight);
+    text-transform: uppercase;
   }
 
   .navbar-item:not(.has-dropdown),
@@ -278,7 +283,6 @@ body {
     background: var(--navbar-menu-background);
     border: 1px solid var(--navbar-menu-border-color);
     border-top: none;
-    border-radius: 0 0 0.25rem 0.25rem;
     display: none;
     top: 100%;
     left: 0;
@@ -286,9 +290,20 @@ body {
     position: absolute;
   }
 
+  .navbar-dropdown > .navbar-item {
+    border-bottom: 1px solid var(--color-grey-2);
+    text-align: right;
+    width: 100%;
+  }
+
   .navbar-dropdown .navbar-item {
     padding: 0.5rem 3rem 0.5rem 1rem;
     white-space: nowrap;
+  }
+
+  .navbar-item {
+    line-height: 1.6rem;  /* reading the code, the other sites use 1.8rem, but visual tuning suggests 1.6rem */
+    font-size: 1rem;     /* a guess, from visual tuning */
   }
 
   .navbar-dropdown .navbar-item:last-child {
