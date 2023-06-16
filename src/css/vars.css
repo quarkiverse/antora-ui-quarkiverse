@@ -11,6 +11,7 @@
   --color-red: #ff004a;
   --color-dark-red: #c00;
   --color-cta-blue: #0b58ab;
+  --color-ultralight-grey: #fafafa;
   --color-grey-0: #efefef;
   --color-grey-1: #aaa;
   --color-grey-2: #555;
@@ -97,7 +98,7 @@
   --abstract-background: var(--color-black);
   --abstract-font-color: var(--color-black);
   --abstract-border-color: var(--panel-border-color);
-  --admonition-background: var(--panel-background);
+  --admonition-background: var(--color-ultralight-grey);
   --admonition-label-font-weight: var(--body-font-weight-bold);
   --caption-font-color: var(--color-grey-3);
   --caption-font-weight: var(--body-font-weight-bold);
