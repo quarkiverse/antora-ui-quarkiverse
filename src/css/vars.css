@@ -60,8 +60,8 @@
   --nav-line-height: 1.35;
   --nav-heading-font-color: var(--color-black);
   --nav-muted-color: var(--color-grey-4);
-  --nav-panel-divider-color: var(--color-grey-2);
-  --nav-secondary-background: var(--color-grey-2);
+  --nav-panel-divider-color: var(--color-grey-0);
+  --nav-secondary-background: var(--color-white);
   /* toolbar */
   --toolbar-background: var(--color-quarkus-blue);
   --toolbar-border-color: var(--toolbar-background);

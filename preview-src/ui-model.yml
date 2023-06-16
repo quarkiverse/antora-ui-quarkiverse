@@ -5,21 +5,20 @@ site:
   homeUrl: &home_url /xyz/dev/index.html
 
   components:
-  - name: abc
-    title: Project ABC
+  - &component
+    name: abc
+    title: &component_title Index
     url: '#'
     versions:
     - &latest_version_abc
       url: '#'
-      version: '1.1'
-      displayVersion: '1.1'
-    - url: '#'
-      version: '1.0'
-      displayVersion: '1.0'
+      version: 'index'
+      displayVersion: 'index'
     latestVersion: *latest_version_abc
-  - &component
-    name: xyz
-    title: &component_title Project NotReally Has A VeryLong Title
+  - name: xyz
+    title: Project NotReally
+  - name: xyz
+    title: Project NotReally Has A VeryLong Title
     url: /xyz/6.0/index.html
     versions:
     - &latest_version_xyz
@@ -95,7 +94,7 @@ page:
     displayVersion: '5.0'
     missing: true
     url: '#'
-  navigation:
+  not-navigation:
   - root: true
     items:
     - content: Quickstart
