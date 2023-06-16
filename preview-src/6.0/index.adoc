@@ -1,0 +1,9 @@
+= Other Content
+Author Name
+:idprefix:
+:idseparator: -
+:!example-caption:
+:!table-caption:
+:page-pagination:
+
+Another page, to demonstrate navigation.
