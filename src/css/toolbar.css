@@ -34,6 +34,10 @@
   }
 }
 
+.toolbar-padder {
+  flex-shrink: 0;
+}
+
 .nav-toggle.is-active {
   background-image: url(../img/back.svg);
   background-size: 41.5%;
