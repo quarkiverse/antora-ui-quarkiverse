@@ -12,8 +12,8 @@ site:
     versions:
     - &component_version
       url: '#'
-      version: 'noversion'
-      displayVersion: 'noversion'
+      version: 'explore'
+      displayVersion: 'explore'
     latest: *component_version
   - name: xyz
     title: Project NotReally
@@ -57,8 +57,8 @@ page:
   title: Minecraft Observability
   component: *component
   componentVersion: *component_version
-  version: 'noversion'
-  displayVersion: 'noversion'
+  version: 'explore'
+  displayVersion: 'explore'
   module: ROOT
   relativeSrcPath: index.adoc
   editUrl: http://example.com/project-xyz/blob/main/index.adoc
