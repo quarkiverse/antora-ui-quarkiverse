@@ -1,6 +1,6 @@
 {{#with page.versions}}
 <div class="page-versions">
-  {{#unless (eq "noversion" @root.page.componentVersion.displayVersion )}}
+  {{#unless (eq "explore" @root.page.componentVersion.displayVersion )}}
   <button class="version-menu-toggle" title="Show other versions of page">{{@root.page.componentVersion.displayVersion}}</button>
   <div class="version-menu">
     {{#each this}}

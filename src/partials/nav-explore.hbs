@@ -1,6 +1,6 @@
 <div class="nav-panel-explore{{#unless page.navigation}} is-active{{/unless}}" data-panel="explore">
   {{#if page.component}}
-    {{#if (eq "noversion" ./page.componentVersion.version )}}
+    {{#if (eq "explore" ./page.componentVersion.version )}}
         <!--  placeholder toolbar to align with main toolbar-->
         <div class="toolbar toolbar-padder" style="position: static"></div>
       {{ else }}
@@ -12,7 +12,7 @@
   {{/if}}
   <ul class="components">
     {{#each site.components}}
-      {{#unless (eq "noversion" ./latest.version)}}
+      {{#unless (eq "explore" ./latest.version)}}
         <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
         <a class="title" href="{{{relativize ./url}}}">{{{./title}}}</a>
         <ul class="versions">
