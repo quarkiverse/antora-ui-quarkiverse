@@ -14,8 +14,22 @@ var window
     'far fa-copy',
     'far fa-check-square',
     'fab fa-github',
+    'fab fa-gitlab',
     'far fa-square',
     'fab fa-twitter',
+    'fab fa-redhat',
+    'fab fa-aws',
+    'fab fa-amazon',
+    'fab fa-microsoft',
+    'fab fa-google',
+    'fab fa-vaadin',
+    'fab fa-stackexchange',
+    'fab fa-free-code-camp',
+    'fab fa-react',
+    'fab fa-java',
+    'fas fa-lock',
+    'fas fa-heart',
+    'fas fa-question-circle',
   ]
   var iconDefs = (scope.FontAwesomeIconDefs = [])
   iconDefs.admonitionIcons = admonitionIcons
