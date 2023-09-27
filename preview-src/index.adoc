@@ -31,6 +31,8 @@ E = mc^2^.
 Eum an doctus <<liber-recusabo,maiestatis efficiantur>>.
 Eu mea inani iriure.footnote:[Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit.]
 
+And here is a lock icon icon:lock[title=Looks like a lock] and a heart icon icon:heart[title=Looks like a heart] and an exclamation icon:question-circle[title=title] (the icons should be before this text). Any icons used need to be explicitly loaded in the `src/js/vendor/fontawesome-icon-defs.js` file.
+
 [,json]
 ----
 {
