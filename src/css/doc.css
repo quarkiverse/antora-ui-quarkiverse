@@ -220,6 +220,7 @@
 .doc table.tableblock {
   font-size: calc(15 / var(--rem-base) * 1rem);
   margin: 1.5rem 0 0;
+  word-break: break-word;
 }
 
 .doc table.tableblock + * {
