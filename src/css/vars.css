@@ -116,8 +116,8 @@
   --quote-font-color: var(--color-grey-4);
   --quote-attribution-font-color: var(--color-grey-3);
   --sidebar-background: var(--color-grey-0);
-  --table-border-color: var(--panel-border-color);
-  --table-stripe-background: var(--panel-background);
+  --table-border-color: var(--color-grey-1);
+  --table-stripe-background: var(--color-grey-0);
   --table-footer-background: linear-gradient(to bottom, var(--color-grey-1) 0%, var(--color-white) 100%);
   /* toc */
   --toc-font-color: var(--nav-muted-color);

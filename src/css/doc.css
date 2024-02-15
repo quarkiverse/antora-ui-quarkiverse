@@ -257,11 +257,6 @@
   border-width: 1px 0;
 }
 
-.doc table.grid-all > thead th,
-.doc table.grid-rows > thead th {
-  border-bottom-width: 2.5px;
-}
-
 .doc table.frame-all {
   border-width: 1px;
 }
