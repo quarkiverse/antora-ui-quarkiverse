@@ -1,11 +1,14 @@
 <main class="article">
-{{> toolbar}}
-  <div class="content">
-{{#if (eq page.layout '404')}}
-{{> article-404}}
-{{else}}
-{{> toc}}
-{{> article}}
-{{/if}}
-  </div>
+  {{> toolbar}}
+
+  <qs-target class="qs-target" search-results-title="Search results:">
+    <div class="content">
+      {{#if (eq page.layout '404')}}
+        {{> article-404}}
+      {{else}}
+        {{> toc}}
+        {{> article}}
+      {{/if}}
+    </div>
+  </qs-target>
 </main>

@@ -70,3 +70,14 @@
 .toolbar .edit-this-page a {
   color: var(--toolbar-muted-color);
 }
+
+.search {
+  margin-right: 10px;
+}
+
+.search input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--toolbar-background);
+  box-sizing: border-box;
+}
