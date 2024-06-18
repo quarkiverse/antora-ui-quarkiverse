@@ -43,7 +43,7 @@ jobs:
 
       - name: Publishing directory for PR preview
         if: "github.event_name == 'pull_request'"
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: site
           path: ./public
