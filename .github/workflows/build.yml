@@ -51,7 +51,7 @@ jobs:
 
       - name: Bump version and push tag
         id: tag
-        uses: anothrNick/github-tag-action@1.69.0
+        uses: anothrNick/github-tag-action@1.70.0
         # Only try and deploy on merged code
         if: "github.repository == 'quarkiverse/antora-ui-quarkiverse' && github.ref_name == 'main' && (github.event_name == 'push' || github.event_name == 'schedule')"
         env:
