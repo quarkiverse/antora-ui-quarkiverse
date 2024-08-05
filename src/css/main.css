@@ -5,6 +5,7 @@
 
   main > .content {
     overflow-x: auto;
+    display: flex;
   }
 }
 
@@ -31,5 +32,19 @@
 @media screen and (min-width: 1216px) {
   aside.toc.sidebar {
     flex-basis: var(--toc-width--widescreen);
+  }
+}
+
+.qs-target {
+  width: 100%;
+  display: block;
+  padding: 0 30px;
+
+  .content {
+    display: flex;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10px;
   }
 }
