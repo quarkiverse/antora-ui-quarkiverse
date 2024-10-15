@@ -187,6 +187,9 @@ Can be used as a fallback when a site URL is not set.
 s| uiRootPath
 | The relative path to the root directory of the UI.
 
+| originUrl
+| This isn't a real property, it is an equivalent to the generated page.attributes.origin-url which is put in for testing.
+
 s| antoraVersion
 | The version of Antora used to build the site (specifically the version of the @antora/page-composer package).
 |===

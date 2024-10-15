@@ -2,8 +2,11 @@
   color: var(--toc-font-color);
 }
 
-.toc.sidebar .toc-menu {
+.toc .sidebar .toc-menu {
   margin-right: 0.75rem;
+}
+
+.sidebar {
   position: sticky;
   top: var(--toc-top);
 }
@@ -99,4 +102,26 @@
 
 .toc .toc-menu .is-hidden-toc {
   display: none !important;
+}
+
+.git-link {
+  color: var(--toc-font-color);
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  line-height: var(--toc-line-height);
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding-top: calc(15 / var(--rem-base) * 1rem);
+}
+
+.git-link-logo {
+  display: block;
+  background: url(../img/github.svg) no-repeat center;
+  height: calc(18 / var(--rem-base) * 1rem);
+  width: calc(18 / var(--rem-base) * 1rem);
+}
+
+.git-link-logo:hover,
+.git-link-logo.is-current {
+  background-image: url(../img/github.svg);
 }
