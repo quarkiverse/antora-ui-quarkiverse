@@ -1,3 +1,10 @@
 <aside class="toc sidebar" data-title="{{{or page.attributes.toctitle 'Contents'}}}" data-levels="{{{or page.attributes.toclevels 2}}}">
+ <div class="sidebar">
   <div class="toc-menu"></div>
+   {{#if page.attributes.origin-url}}
+     <a class="git-link" href="{{page.attributes.origin-url}}"><div class="git-link-logo"></div><div>Extension source</div></a>
+   {{else if page.originUrl}}
+     <a class="git-link" href="{{page.originUrl}}"><div class="git-link-logo"></div><div>Extension source</div></a>
+  {{/if}}
+ </div>
 </aside>

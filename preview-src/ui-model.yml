@@ -62,6 +62,7 @@ page:
   module: ROOT
   relativeSrcPath: index.adoc
   editUrl: http://example.com/project-xyz/blob/main/index.adoc
+  originUrl: http://example.com/project-xyz/
   origin:
     private: false
   previous:

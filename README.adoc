@@ -35,6 +35,21 @@ gulp preview
 
 Changes will be automatically rebuilt and reflected in the browser page.
 
+To try changes on the complete site, locally, run
+
+----
+gulp build
+----
+
+Then build the main docs site and add a ` --ui-bundle-url=<this_dir>/antora-ui-quarkiverse/build/ui-bundle.zip` option to the command line.
+For example,
+
+----
+npm run build -- --ui-bundle-url=~/quarkus/antora-ui-quarkiverse/build/ui-bundle.zip
+----
+
+(note the extra `--` before the argument`).
+
 To deploy a change to sites using this theme, it is sufficient to merge changes to `main`.
 They will be automatically built into a release and consumed in the next scheduled site build.
 
