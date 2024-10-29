@@ -4,7 +4,7 @@
 :hide-uri-scheme:
 // Project URLs:
 :url-project: https://github.com/quarkiverse/antora-ui-quarkiverse
-:url-preview: https://docs.quarkiverse.github.io/
+:url-preview: https://docs.quarkiverse.io/
 :url-ci-pipelines: {url-project}/actions
 :img-ci-status: {url-project}/actions/workflows/build.yml/badge.svg
 // External URLs:
