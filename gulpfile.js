@@ -4,6 +4,8 @@ const { parallel, series, watch } = require('gulp')
 const createTask = require('./gulp.d/lib/create-task')
 const exportTasks = require('./gulp.d/lib/export-tasks')
 const log = require('fancy-log')
+// so that variables from .env are available in the scripts:
+require('dotenv').config()
 
 const bundleName = 'ui'
 const buildDir = 'build'
