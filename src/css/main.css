@@ -40,7 +40,7 @@
   display: block;
   padding: 0 30px;
 
-  .content {
+  > .content {
     display: flex;
   }
 
