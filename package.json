@@ -45,7 +45,7 @@
     "gulp-uglify": "~3.0",
     "gulp-vinyl-zip": "~2.5",
     "handlebars": "~4.7",
-    "highlight.js": "9.18.3",
+    "highlight.js": "11.11.1",
     "js-yaml": "~3.13",
     "merge-stream": "~2.0",
     "node-fetch": "^2.7.0",
