@@ -377,8 +377,8 @@
 .doc .admonitionblock td.icon i:empty::before,
 .doc .admonitionblock td.icon .svga {
   content: "";
-  height: inherit;
-  width: 1.5rem;
+  width: 1em;
+  height: 1em;
   margin: 0 0.25rem 0 -0.5rem;
   border-radius: 0.45rem 0 0 0.45rem;
   padding: 0.2em 0.2em 0.3em 0.3em;
