@@ -28,14 +28,14 @@ jobs:
       # Build the Antora UI bundle for release.
       - name: Build bundle
         id: build_bundle
-        run: gulp bundle
+        run: npx gulp bundle
 
       # Build the Antora preview (ends up in ./public)
       - name: Build preview
         # Only support previews on PRs
         if: "github.event_name == 'pull_request'"
         id: build_preview
-        run: gulp preview:build
+        run: npx gulp preview:build
 
       - name: Store PR id
         if: "github.event_name == 'pull_request'"
