@@ -14,6 +14,8 @@ var window
     'far fa-copy',
     'far fa-check-square',
     'fab fa-github',
+    'fab fa-creative-commons',
+    'fab fa-creative-commons-by',
     'fab fa-gitlab',
     'far fa-square',
     'fab fa-twitter',

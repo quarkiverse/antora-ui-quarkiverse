@@ -1,3 +1,14 @@
-<footer class="footer">
-  <p>Copyright (C) 2020-{{year}} <a href="https://www.redhat.com">Red Hat</a> and individual contributors to <a href="https://github.com/quarkiverse/">Quarkiverse</a>.</p>
+{{!-- The Quarkiverse (Commonhaus) footer, kept in step by hand with the footer of the Quarkiverse Roq theme
+  (https://github.com/quarkiverse/quarkiverse.io/tree/main/theme). Contribute goes to the repository the page comes from. --}}
+<footer class="footer quarkiverse-footer">
+  <div class="footer-bar">
+    {{#if (and page.origin.webUrl (or env.FORCE_SHOW_EDIT_PAGE_LINK (not page.origin.private)))}}
+    <a href="{{page.origin.webUrl}}" target="_blank" rel="noreferrer" class="footer-anchor-link">Contribute<i class="fab fa-github footer-styled-font-awesome-icon" aria-hidden="true"></i></a>
+    {{/if}}
+    <a href="https://www.commonhaus.org/" class="footer-foundation-logo" target="_blank" rel="noreferrer"><img src="{{{uiRootPath}}}/img/commonhaus_reversed.svg" alt="Commonhaus Foundation logo" loading="lazy"></a>
+    <div class="footer-license-info"><i class="fab fa-creative-commons footer-padded-icon" aria-hidden="true"></i><i class="fab fa-creative-commons-by footer-padded-icon" aria-hidden="true"></i><a href="https://creativecommons.org/licenses/by/3.0/" class="footer-license-text">CC by 3.0</a></div>
+  </div>
+  <div class="footer-legal">
+    Copyright © Quarkiverse. All rights reserved. For details on our trademarks, please visit our <a href="https://www.commonhaus.org/policies/trademark-policy/">Trademark Policy</a> and <a href="https://www.commonhaus.org/trademarks/">Trademark List</a>. Trademarks of third parties are owned by their respective holders and their mention here does not suggest any endorsement or association.
+  </div>
 </footer>
