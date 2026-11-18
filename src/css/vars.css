@@ -129,6 +129,7 @@
   --footer-background: var(--color-black);
   --footer-font-color: var(--color-white);
   --footer-link-font-color: var(--color-white);
+  --footer-legal-font-color: var(--color-grey-1);
   /* dimensions and positioning */
   --navbar-height: calc(63 / var(--rem-base) * 1rem);
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);

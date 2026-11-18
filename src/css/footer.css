@@ -1,15 +1,71 @@
+/*
+ * The Quarkiverse (Commonhaus) footer, kept in step by hand with the footer styles of the Quarkiverse Roq theme
+ * (https://github.com/quarkiverse/quarkiverse.io/tree/main/theme, web/app/_quarkiverse-footer.css).
+ */
+
 footer.footer {
   background-color: var(--footer-background);
   color: var(--footer-font-color);
-  font-size: calc(15 / var(--rem-base) * 1rem);
-  line-height: var(--footer-line-height);
-  padding: 1.5rem;
-}
-
-.footer p {
-  margin: 0.5rem 0;
+  font-size: calc(16 / var(--rem-base) * 1rem);
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 0.5rem 1.5rem;
 }
 
 .footer a {
   color: var(--footer-link-font-color);
+}
+
+.footer-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* not in the Roq theme: on narrow screens, wrap rather than squeeze the items */
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.footer-anchor-link,
+.footer-license-text {
+  margin: 8px;
+  text-decoration: none;
+}
+
+.footer-styled-font-awesome-icon {
+  margin-left: 5px;
+}
+
+.footer-license-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-padded-icon {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.footer-foundation-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-foundation-logo img {
+  /* The single-line logo is about 9:1, so it needs more width than a stacked one to stay legible */
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-legal {
+  margin: 0;
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-weight: 200;
+  color: var(--footer-legal-font-color);
+}
+
+.footer-legal a {
+  color: var(--footer-legal-font-color);
+  text-decoration: underline;
 }

@@ -85,4 +85,9 @@
   .footer * {
     color: inherit;
   }
+
+  /* The reversed (white) logo would not show on paper */
+  .footer-foundation-logo {
+    display: none;
+  }
 }
