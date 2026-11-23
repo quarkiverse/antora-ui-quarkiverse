@@ -10,6 +10,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Needed to push the version tag and create the release on main
+    permissions:
+      contents: write
     strategy:
       matrix:
         node-version: [18.16.0]
